@@ -1,0 +1,26 @@
+右键管理员身份运行cmd
+
+adb devices
+
+adb root
+adb disable-verity
+adb remount
+
+adb shell
+su
+mount -o remount -o rw /
+cd /system/etc
+rm ./setup.conf
+touch ./setup.conf
+cat >> ./setup.conf
+
+重新右键管理员身份运行cmd
+
+adb push setup.conf /system/etc/
+
+重启
+adb reboot
+或者手动重启
+
+B79A939390%50
+hello%大小
